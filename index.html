@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название Песни - Исполнитель</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .album-cover {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            animation: float 6s ease-in-out infinite;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .album-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .song-info {
+            margin-bottom: 30px;
+        }
+        
+        .song-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .artist {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #fdbb2d;
+        }
+        
+        .audio-player {
+            width: 100%;
+            margin: 30px 0;
+        }
+        
+        audio {
+            width: 100%;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .lyrics {
+            margin-top: 30px;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .lyrics p {
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .album-cover {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .song-title {
+                font-size: 2rem;
+            }
+            
+            .artist {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="album-cover">
+            <img src="https://placehold.co/400x400/1a2a6c/white?text=Обложка+альбома" alt="Обложка альбома">
+        </div>
+        
+        <div class="song-info">
+            <h1 class="song-title">Название Песни</h1>
+            <p class="artist">Исполнитель</p>
+        </div>
+        
+        <div class="audio-player">
+            <audio controls>
+                <source src="ваша-песня.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает аудио элемент.
+            </audio>
+        </div>
+        
+        <div class="lyrics">
+            <p>Здесь будет текст вашей песни...</p>
+            <p>Строка 1</p>
+            <p>Строка 2</p>
+            <p>Строка 3</p>
+            <p>Строка 4</p>
+            <p>Строка 5</p>
+            <p>Строка 6</p>
+            <p>Строка 7</p>
+            <p>Строка 8</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2023 Все права защищены</p>
+    </footer>
+</body>
+</html>
